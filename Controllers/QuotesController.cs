@@ -24,6 +24,17 @@ namespace QuotesApp1.Controllers
         {
             return View(await _context.Quote.ToListAsync());
         }
+        // GET: Quotes/ShowSearchForm
+        public async Task<IActionResult> ShowSearchForm()
+        {
+            return View();
+        }
+
+        // POST: Quotes/ShowSearchForm
+        public async Task<IActionResult> ShowSearchResults(string SearchPhrase)
+        {
+            return View("Index" , await _context.Quote.Where(j => j.QuoteAuthor.Contains(SearchPhrase) || j.QuoteText.Contains(SearchPhrase)).ToListAsync());
+        }
 
         // GET: Quotes/Details/5
         public async Task<IActionResult> Details(int? id)
