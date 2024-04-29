@@ -7,29 +7,12 @@
     <h1 class="display-4">Motivation Quotes Application</h1>
     <p>Inspiring and Motivational Quotes to uplit you</a>.</p>
     <br />
-    <h1>Trending Quotes</h1>
+    <h1>New Quotes</h1>
 
-  
-    <table class="table">
-        <thead>
-            <tr>
-                <th>
-                    @* @Html.DisplayNameFor(model => model.QuoteAuthor)  *@
-                    Quote Author
-                </th>
-                <th>
-                    @* @Html.DisplayNameFor(model => model.QuoteText)  *@
-                    Quote
-                </th>
-                <th></th>
-            </tr>
-        </thead>
-        <tbody>
-
-           
-        </tbody>
-    </table>
-            <br />
+  <div>
+        <partial name="_QuotesList" />
+  </div>
+    
 </div>
 
 
