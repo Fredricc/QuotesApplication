@@ -9,25 +9,30 @@
 <h4>Quote</h4>
 <hr />
 <div class="row">
-    <div class="col-md-4">
+    <div class="col-md-4 my-auto">
         <form asp-action="Create">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <div class="form-group">
-                <label asp-for="QuoteAuthor" class="control-label"></label>
+            <div class="form-group my-auto">
+                <label asp-for="QuoteAuthor" class="control-label">Quote Author</label>
                 <input asp-for="QuoteAuthor" class="form-control" />
                 <span asp-validation-for="QuoteAuthor" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <label asp-for="QuoteText" class="control-label"></label>
+            <br />
+
+            <div class="form-group my-auto">
+                <label asp-for="QuoteText" class="control-label">Quote</label>
                 <input asp-for="QuoteText" class="form-control" />
                 <span asp-validation-for="QuoteText" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-primary" />
+            <br />
+            <div class="form-group my-auto">
+                <input type="submit" value="Create" class="btn btn-primary" mt="2px" />
             </div>
         </form>
     </div>
 </div>
+<br />
+
 
 <div>
     <a asp-action="Index">Back to List</a>
